@@ -1,18 +1,40 @@
 # 01_pyramids.rb
-
-puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?"
-print "> "
-number_levels = gets.chomp
-
+def get_number
+    puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?"
+    print "> "
+    number = gets.chomp.to_i
+    return number
+end
 print "Voici la pyramide :"
 
-(number_levels.to_i).times do |i| puts
-    number_spaces = number_levels.to_i - i -1
-    (number_spaces.to_i).times do print " "
-    end
-    number_display = i + 1
-    (number_display.to_i).times do print "#".center(2)
+def espace
+    print " " 
+end 
+
+def diese
+    print "#"
+end
+
+def fullpyra
+    pyramide = get_number
+    compteur = 0
+    while pyramide > 0
+        diese
+        pyramide = pyramide - 1
     end
 end
 
-puts
+
+
+def perform
+    fullpyra
+end 
+perform
+
+#Voici la pyramide :
+    #
+   ###
+  #####
+ #######
+#########
+
